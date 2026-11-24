@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-24T06:23:47.645386-05:00",
- "updated_label": "Tue Nov 24, 6:23 AM ET",
+ "updated_at": "2026-11-24T06:25:58.904856-05:00",
+ "updated_label": "Tue Nov 24, 6:25 AM ET",
  "today": "2026-11-24",
  "yesterday": "2026-11-23",
  "api_source": "chrome-bootstrap",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: bounces 20.0% (yesterday).",
   "win": "The only buyer in the last 7 days got their access automation.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Tue Nov 24, 6:23 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
+  "text": "NBR daily KPIs, Tue Nov 24, 6:25 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
  },
  "mail": {
   "status": "red",

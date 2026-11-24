@@ -452,7 +452,10 @@ def build(src, ui, prev, now):
         if c.get("status") not in ("active", "scheduled") or not c.get("next_ms"):
             continue
         at = datetime.fromtimestamp(c["next_ms"] / 1000, TZ)
-        overdue = at < now and not c.get("processed")
+        read = parse((src or {}).get("read_at") or now.isoformat())
+        # overdue only if GHL was read AFTER the send time and still showed nothing processed;
+        # a send time that passed after the last read is unknown, so it is left out until the next read
+        overdue = at < read and not c.get("processed")
         if not (now - timedelta(hours=24) <= at <= end) or (at < now and not overdue):
             continue
         hint = next((h for h in N["audience_hints"] if (c["name"] or "").startswith(h["name_starts"])), None)
