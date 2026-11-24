@@ -1,11 +1,11 @@
 {
  "version": 1,
- "updated_at": "2026-11-24T06:25:58.904856-05:00",
- "updated_label": "Tue Nov 24, 6:25 AM ET",
+ "updated_at": "2026-11-24T12:10:38.298055-05:00",
+ "updated_label": "Tue Nov 24, 12:10 PM ET",
  "today": "2026-11-24",
  "yesterday": "2026-11-23",
- "api_source": "chrome-bootstrap",
- "api_origin": null,
+ "api_source": "previous-run",
+ "api_origin": "chrome-bootstrap",
  "api_read_at": "2026-11-24T06:15:00-05:00",
  "status": {
   "mail": "red",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: bounces 20.0% (yesterday).",
   "win": "The only buyer in the last 7 days got their access automation.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Tue Nov 24, 6:25 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
+  "text": "NBR daily KPIs, Tue Nov 24, 12:10 PM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
  },
  "mail": {
   "status": "red",
@@ -481,17 +481,6 @@
   "status": "red",
   "rows": [
    {
-    "at": "2026-11-24T07:00:00-05:00",
-    "date": "Tue Nov 24",
-    "time": "7:00 am",
-    "name": "[ISLA] BFCM Email 2 - Color Inventory - 11.24.26",
-    "brand": "ISLA",
-    "channel": "Email",
-    "audience": 4427,
-    "audience_note": "about, from Email 1 list (Nov 23), same filter",
-    "overdue": false
-   },
-   {
     "at": "2026-11-25T07:00:00-05:00",
     "date": "Wed Nov 25",
     "time": "7:00 am",
@@ -550,7 +539,7 @@
   "flags": [
    {
     "level": "red",
-    "text": "6 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Tue Nov 24, Wed Nov 25, Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 2 - Color Inventory - 11.24.26 at 7:00 am."
+    "text": "5 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Wed Nov 25, Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26 at 7:00 am."
    }
   ],
   "window_days": 7,
