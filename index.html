@@ -139,7 +139,8 @@ fetch('data.json?t=' + Date.now()).then(r => r.json()).then(render).catch(e => {
 
 function render(D) {
   const app = document.getElementById('app'), E = D.mail, A = D.access, M = D.money, X = D.next;
-  const apiLabel = {api:'GHL API', 'chrome-bootstrap':'one-off Chrome read (API token not set up yet)', 'previous-run':'last good API read', none:'not read'}[D.api_source] || D.api_source;
+  const src0 = D.api_source === 'previous-run' ? (D.api_origin || 'api') : D.api_source;
+  const apiLabel = {api:'GHL API', 'chrome-bootstrap':'one-off Chrome read (API token not set up yet)', none:'not read'}[src0] || src0;
   document.getElementById('stamp').innerHTML =
     `Last updated <b>${when(D.updated_at)}</b><br>Payments, buyers, campaigns: ${esc(apiLabel)}, ${when(D.api_read_at)}<br>` +
     `GHL email screens (UI-only): read ${when(E.ui_read_at)} <span class="${E.ui_stale ? 'lvl amber' : ''}">(${ago(E.ui_read_at)}${E.ui_stale ? ', stale' : ''})</span>`;

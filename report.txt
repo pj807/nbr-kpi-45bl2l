@@ -1,6 +1,6 @@
-NBR daily KPIs, Tue Nov 24, 6:21 AM ET
+NBR daily KPIs, Tue Nov 24, 6:22 AM ET
 Headline: Email is not healthy: bounces 20.0% (yesterday).
-Win: All 1 buyer in the last 7 days got their access automation.
+Win: The only buyer in the last 7 days got their access automation.
 Watch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.
 Email RED | Buyer access GREEN | Money GREEN | Next sends RED
 Sales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)

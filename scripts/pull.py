@@ -494,7 +494,8 @@ def build(src, ui, prev, now):
     if totals["y"][0]:
         win = f"{totals['y'][0]} sale{'s' if totals['y'][0] != 1 else ''} yesterday, {money(totals['y'][1])}."
     elif paid7 and not unmatched:
-        win = f"All {paid7} buyer{'s' if paid7 != 1 else ''} in the last 7 days got their access automation."
+        win = ("The only buyer in the last 7 days got their access automation." if paid7 == 1
+               else f"All {paid7} buyers in the last 7 days got their access automation.")
     elif Y and (Y.get("delivered_pct") or 0) >= 95 and Y["sent"] >= L["min_sent_for_rate"]:
         win = f"Delivered {Y['delivered_pct']}% of email yesterday."
     else:
@@ -518,7 +519,7 @@ def build(src, ui, prev, now):
               f"30 days {totals['d30'][0]} ({money(totals['d30'][1])})")
     return {
         "version": 1, "updated_at": now.isoformat(), "updated_label": stamp, "today": today.isoformat(), "yesterday": yday,
-        "api_source": (src or {}).get("source", "none"), "api_read_at": (src or {}).get("read_at"),
+        "api_source": (src or {}).get("source", "none"), "api_origin": (src or {}).get("origin"), "api_read_at": (src or {}).get("read_at"),
         "status": {"mail": email_status, "access": access_status, "money": money_status, "next": next_status},
         "report": {"headline": head, "win": win, "watch": watch, "text": report},
         "mail": email, "access": access, "money": money_, "next": nxt,
@@ -552,6 +553,7 @@ def main():
             log(f"No GHL token yet: using the Chrome read in {os.path.basename(boots[-1])}.")
         elif prev and prev.get("_src"):
             src = prev["_src"]
+            src["origin"] = src.get("origin") or prev.get("api_source")
             src["source"] = "previous-run"
             log("No GHL token: keeping the last API numbers (marked as such on the page).")
         else:
@@ -563,7 +565,8 @@ def main():
                                   for p in src.get("payments", [])],
                     "failed_payments_30d": src.get("failed_payments_30d"), "campaigns": src.get("campaigns", []),
                     "workflows_live": src.get("workflows_live", {}), "email_days": src.get("email_days", {}),
-                    "sends": src.get("sends", []), "read_at": src.get("read_at")}
+                    "sends": src.get("sends", []), "read_at": src.get("read_at"),
+                    "origin": src.get("origin") if src.get("source") == "previous-run" else src.get("source")}
     json.dump(data, open(os.path.join(ROOT, "data.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     open(os.path.join(ROOT, "report.txt"), "w", encoding="utf-8").write(report + "\n")
     log(report)
