@@ -72,6 +72,8 @@ table{width:100%;border-collapse:collapse;font-size:14px}
 th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:right;padding:10px 12px;border-bottom:1px solid var(--line)}
 td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;vertical-align:top}
 th:first-child,td:first-child{text-align:left}
+table.lt th,table.lt td{text-align:left}
+table.lt th.r,table.lt td.r{text-align:right}
 tr:last-child td{border-bottom:0}
 td .s{display:block;font-size:12px;color:var(--muted)}
 .lvl{font-weight:600}.lvl.red{color:var(--red)}.lvl.amber{color:var(--amber)}.lvl.green{color:var(--green)}.lvl.grey{color:var(--grey)}
@@ -210,11 +212,11 @@ function render(D) {
   app.append($(`<section id="access">
     <div class="shead"><div class="l"><h2>2 · Did every buyer get their access?</h2>${rag(A.status, A.paid ? null : 'No buyers')}</div>
       <span class="src">Paid orders ${day(A.window[0])} – ${day(A.window[1])} · matched = the access automation reached them within ${A.within_hours} h</span></div>
-    <div class="panel"><table class="stack">
-      <thead><tr><th>Product</th><th>Access automation</th><th>Matched</th><th></th></tr></thead>
+    <div class="panel"><table class="stack lt">
+      <thead><tr><th>Product</th><th>Access automation</th><th class="r">Matched</th><th></th></tr></thead>
       <tbody>${A.rows.map(r => `<tr><td class="first">${esc(r.label)}<span class="tag">${esc(r.brand)}</span></td>
         <td data-l="Automation" class="wrapname">${esc(r.workflow)}<span class="s">${esc(r.workflow_status)} · proof: ${esc(r.proof)}</span></td>
-        <td data-l="Matched">${r.paid ? `<span class="lvl ${r.unmatched ? 'red' : 'green'}">${r.matched} of ${r.paid}</span>` : '<span class="s" style="display:inline">no buyers</span>'}</td>
+        <td data-l="Matched" class="r">${r.paid ? `<span class="lvl ${r.unmatched ? 'red' : 'green'}">${r.matched} of ${r.paid}</span>` : '<span class="s" style="display:inline">no buyers</span>'}</td>
         <td>${r.unmatched ? `<a href="${esc(r.open_orders)}" target="_blank" rel="noopener">Open orders in GHL</a><span class="s"><a href="${esc(r.open_workflow)}" target="_blank" rel="noopener">Open workflow</a></span>` : ''}</td></tr>`).join('')}</tbody></table></div>
     <p class="note">Counts only. No names, emails or contact IDs are stored on this page.</p>
   </section>`));
@@ -250,12 +252,12 @@ function render(D) {
   app.append($(`<section id="next">
     <div class="shead"><div class="l"><h2>4 · What's going out next</h2>${rag(X.status)}</div><span class="src">Scheduled email campaigns, next ${X.window_days} days · GHL Email Marketing</span></div>
     ${X.flags.length ? `<ul class="flags">${X.flags.map(f => `<li class="${f.level}">${esc(f.text)}</li>`).join('')}</ul>` : ''}
-    <div class="panel"><table class="stack">
-      <thead><tr><th>When (ET)</th><th>Name</th><th>Brand</th><th>Audience</th></tr></thead>
+    <div class="panel"><table class="stack lt">
+      <thead><tr><th>When (ET)</th><th>Name</th><th>Brand</th><th class="r">Audience</th></tr></thead>
       <tbody>${X.rows.length ? X.rows.map(r => `<tr><td class="first">${esc(r.date)}, ${esc(r.time)}${r.overdue ? ' <span class="tag">overdue</span>' : ''}</td>
-        <td data-l="Name" class="wrapname" style="text-align:left">${esc(r.name)}<span class="s">${esc(r.channel)}</span></td>
+        <td data-l="Name" class="wrapname">${esc(r.name)}<span class="s">${esc(r.channel)}</span></td>
         <td data-l="Brand">${esc(r.brand)}</td>
-        <td data-l="Audience">${r.audience ? '~' + n(r.audience) : '–'}<span class="s">${esc(r.audience_note)}</span></td></tr>`).join('')
+        <td data-l="Audience" class="r">${r.audience ? '~' + n(r.audience) : '–'}<span class="s">${esc(r.audience_note)}</span></td></tr>`).join('')
         : '<tr><td colspan="4">Nothing scheduled.</td></tr>'}</tbody></table></div>
     <p class="note">${esc(X.sms_note)}</p>
   </section>`));

@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-24T06:22:38.188871-05:00",
- "updated_label": "Tue Nov 24, 6:22 AM ET",
+ "updated_at": "2026-11-24T06:23:47.645386-05:00",
+ "updated_label": "Tue Nov 24, 6:23 AM ET",
  "today": "2026-11-24",
  "yesterday": "2026-11-23",
  "api_source": "chrome-bootstrap",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: bounces 20.0% (yesterday).",
   "win": "The only buyer in the last 7 days got their access automation.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Tue Nov 24, 6:22 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
+  "text": "NBR daily KPIs, Tue Nov 24, 6:23 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
  },
  "mail": {
   "status": "red",
@@ -488,7 +488,7 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    },
    {
@@ -499,7 +499,7 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    },
    {
@@ -510,7 +510,7 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    },
    {
@@ -521,7 +521,7 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    },
    {
@@ -532,7 +532,7 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    },
    {
@@ -543,34 +543,14 @@
     "brand": "ISLA",
     "channel": "Email",
     "audience": 4427,
-    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "audience_note": "about, from Email 1 list (Nov 23), same filter",
     "overdue": false
    }
   ],
   "flags": [
    {
     "level": "red",
-    "text": "[ISLA] BFCM Email 2 - Color Inventory - 11.24.26 (Tue Nov 24) goes to about 4,427 contacts while email is red."
-   },
-   {
-    "level": "red",
-    "text": "[ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26 (Wed Nov 25) goes to about 4,427 contacts while email is red."
-   },
-   {
-    "level": "red",
-    "text": "[ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26 (Fri Nov 27) goes to about 4,427 contacts while email is red."
-   },
-   {
-    "level": "red",
-    "text": "[ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26 (Sat Nov 28) goes to about 4,427 contacts while email is red."
-   },
-   {
-    "level": "red",
-    "text": "[ISLA] BFCM Email 6 - Make The Switch - 11.29.26 (Sun Nov 29) goes to about 4,427 contacts while email is red."
-   },
-   {
-    "level": "red",
-    "text": "[ISLA] BFCM Email 7 - Last Day - 11.30.26 (Mon Nov 30) goes to about 4,427 contacts while email is red."
+    "text": "6 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Tue Nov 24, Wed Nov 25, Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 2 - Color Inventory - 11.24.26 at 7:00 am."
    }
   ],
   "window_days": 7,

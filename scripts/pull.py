@@ -470,11 +470,20 @@ def build(src, ui, prev, now):
         gap = (b - a).total_seconds() / 86400
         if gap > N["gap_days_amber"]:
             flags.append({"level": "amber", "text": f"No sends scheduled for {gap:.0f} days ({short_day(et(a).date())} to {short_day(et(b).date())})."})
+    big = []
     for r in rows:
         if r["overdue"]:
             flags.append({"level": "amber", "text": f"{r['name']} was due {r['date']} {r['time']} and GHL shows it still scheduled with nothing processed."})
         if (r["audience"] or 0) > N["big_send_contacts"] and email_status in ("amber", "red") and not r["overdue"]:
-            flags.append({"level": "red", "text": f"{r['name']} ({r['date']}) goes to about {r['audience']:,} contacts while email is {email_status}."})
+            big.append(r)
+    if len(big) == 1:
+        r = big[0]
+        flags.insert(0, {"level": "red", "text": f"{r['name']} ({r['date']}, {r['time']}) goes to about {r['audience']:,} contacts while email is {email_status}."})
+    elif big:
+        sizes = sorted({r["audience"] for r in big})
+        size = f"about {sizes[0]:,} each" if len(sizes) == 1 else f"{sizes[0]:,} to {sizes[-1]:,} each"
+        flags.insert(0, {"level": "red", "text": f"{len(big)} sends over {N['big_send_contacts']:,} contacts ({size}) are scheduled while email is "
+                                                 f"{email_status}: {', '.join(r['date'] for r in big)}. First: {big[0]['name']} at {big[0]['time']}."})
     next_status = "red" if any(f["level"] == "red" for f in flags) else ("amber" if flags else ("green" if rows else "amber"))
     if not rows:
         flags.append({"level": "amber", "text": f"Nothing scheduled in the next {N['window_days']} days."})

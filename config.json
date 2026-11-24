@@ -76,7 +76,7 @@
   "big_send_contacts": 3000,
   "_how": "Flags: (1) a gap of more than gap_days_amber days with no scheduled send inside the window (from now to the end of the window); (2) any single send over big_send_contacts while the email section is amber or red. Audience size: GHL fixes the list when a send starts, so a scheduled send has no count yet; audience_hints gives the last real list size of the same series.",
   "audience_hints": [
-   {"name_starts": "[ISLA] BFCM Email", "contacts": 4427, "source": "BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter"}
+   {"name_starts": "[ISLA] BFCM Email", "contacts": 4427, "source": "Email 1 list (Nov 23), same filter"}
   ],
   "brand_from_name": [["[ISLA]", "ISLA"], ["[NBR", "NBR"], ["[BMS]", "BMS"], ["ISLA", "ISLA"], ["BMS", "BMS"], ["NBR", "NBR"]]
  },
