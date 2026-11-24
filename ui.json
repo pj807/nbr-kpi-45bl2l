@@ -1,0 +1,175 @@
+{
+ "_note": "UI-only GHL numbers (totals only), read in Chrome on the NBR location. Updated by scripts/ui_update.py.",
+ "days": {
+  "2026-11-10": {
+   "sent": 564,
+   "delivered": 561,
+   "opened": 374,
+   "clicked": 5,
+   "complained": 0,
+   "bounced": 3,
+   "unsubscribed": 0,
+   "failed": 0
+  },
+  "2026-11-11": {
+   "sent": 1000,
+   "delivered": 948,
+   "opened": 625,
+   "clicked": 11,
+   "complained": 0,
+   "bounced": 52,
+   "unsubscribed": 0,
+   "failed": 0
+  },
+  "2026-11-12": {
+   "sent": 1439,
+   "delivered": 1398,
+   "opened": 897,
+   "clicked": 14,
+   "complained": 0,
+   "bounced": 41,
+   "unsubscribed": 1,
+   "failed": 0
+  },
+  "2026-11-13": {
+   "sent": 1876,
+   "delivered": 1839,
+   "opened": 1188,
+   "clicked": 14,
+   "complained": 0,
+   "bounced": 37,
+   "unsubscribed": 6,
+   "failed": 0
+  },
+  "2026-11-14": {
+   "sent": 2309,
+   "delivered": 2225,
+   "opened": 1444,
+   "clicked": 12,
+   "complained": 0,
+   "bounced": 82,
+   "unsubscribed": 2,
+   "failed": 0
+  },
+  "2026-11-15": {
+   "sent": 2775,
+   "delivered": 2577,
+   "opened": 1632,
+   "clicked": 13,
+   "complained": 0,
+   "bounced": 198,
+   "unsubscribed": 0,
+   "failed": 0
+  },
+  "2026-11-16": {
+   "sent": 3224,
+   "delivered": 3052,
+   "opened": 1626,
+   "clicked": 15,
+   "complained": 0,
+   "bounced": 171,
+   "unsubscribed": 2,
+   "failed": 0
+  },
+  "2026-11-17": {
+   "sent": 3665,
+   "delivered": 3536,
+   "opened": 1641,
+   "clicked": 14,
+   "complained": 0,
+   "bounced": 128,
+   "unsubscribed": 0,
+   "failed": 0
+  },
+  "2026-11-18": {
+   "sent": 3939,
+   "delivered": 3772,
+   "opened": 1558,
+   "clicked": 16,
+   "complained": 0,
+   "bounced": 94,
+   "unsubscribed": 1,
+   "failed": 0
+  },
+  "2026-11-19": {
+   "sent": 3997,
+   "delivered": 3909,
+   "opened": 1359,
+   "clicked": 11,
+   "complained": 0,
+   "bounced": 71,
+   "unsubscribed": 2,
+   "failed": 0
+  },
+  "2026-11-20": {
+   "sent": 3878,
+   "delivered": 3585,
+   "opened": 1048,
+   "clicked": 9,
+   "complained": 1,
+   "bounced": 74,
+   "unsubscribed": 0,
+   "failed": 0
+  },
+  "2026-11-21": {
+   "sent": 3329,
+   "delivered": 3164,
+   "opened": 695,
+   "clicked": 4,
+   "complained": 0,
+   "bounced": 91,
+   "unsubscribed": 1,
+   "failed": 521
+  },
+  "2026-11-22": {
+   "sent": 500,
+   "delivered": 352,
+   "opened": 30,
+   "clicked": 0,
+   "complained": 0,
+   "bounced": 147,
+   "unsubscribed": 0,
+   "failed": 2894
+  },
+  "2026-11-23": {
+   "sent": 500,
+   "delivered": 400,
+   "opened": 95,
+   "clicked": 0,
+   "complained": 0,
+   "bounced": 100,
+   "unsubscribed": 0,
+   "failed": 4733
+  }
+ },
+ "blocks": {
+  "2026-11-23": 99,
+  "2026-11-17..2026-11-23": 552
+ },
+ "top_blocks": [
+  [
+   "Gmail",
+   "550 5.7.1 Low Domain Reputation",
+   70
+  ],
+  [
+   "Outlook US",
+   "550 5.7.1 Uncategorized",
+   28
+  ]
+ ],
+ "sending": {
+  "state": "blocked",
+  "title": "Email sending is blocked due to a high number of spam blocks from email providers.",
+  "until": "2026-11-24T10:04:00-05:00",
+  "note": "Read Nov 24 about 6 AM ET: GHL shows sending blocked until 10:04 AM ET today. BFCM Email 2 is scheduled for 7:00 AM ET.",
+  "until_label": "notice says sending resumes Tue Nov 24, 10:04 AM ET"
+ },
+ "today_so_far": {
+  "date": "2026-11-24",
+  "sent": 0,
+  "failed": 1179,
+  "as_of": "about 6 AM ET"
+ },
+ "read_at": "2026-11-24T06:05:00-05:00"
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>NBR Daily KPIs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9;--panel:#fff;--ink:#161a22;--muted:#5b6372;--line:#dfe3ea;--soft:#eef0f3;
+  --blue:#2f6fd6;--blue-bg:#e8f0fc;--green:#23804a;--green-bg:#e3f3e8;--amber:#a8610a;--amber-bg:#fbf0dd;
+  --red:#b3261e;--red-bg:#fbe7e5;--grey:#6b7280;--grey-bg:#eef0f3;
+  --c1:#2f6fd6;--c2:#c2410c;
+  --display:"Newsreader",Georgia,serif;--body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f141d;--panel:#171d28;--ink:#e8ebf1;--muted:#9aa3b2;--line:#2b3342;--soft:#1f2633;
+  --blue:#7fb0f5;--blue-bg:#1a2a44;--green:#6fd394;--green-bg:#15321f;--amber:#f0b45c;--amber-bg:#3a2a12;
+  --red:#f28b82;--red-bg:#3d1c1a;--grey:#9aa3b2;--grey-bg:#1f2633;--c1:#7fb0f5;--c2:#fb923c;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141d;--panel:#171d28;--ink:#e8ebf1;--muted:#9aa3b2;--line:#2b3342;--soft:#1f2633;
+  --blue:#7fb0f5;--blue-bg:#1a2a44;--green:#6fd394;--green-bg:#15321f;--amber:#f0b45c;--amber-bg:#3a2a12;
+  --red:#f28b82;--red-bg:#3d1c1a;--grey:#9aa3b2;--grey-bg:#1f2633;--c1:#7fb0f5;--c2:#fb923c;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+main{max-width:980px;margin:0 auto;padding:28px 16px 80px;display:grid;gap:34px}
+h1,h2{font-family:var(--display);font-weight:500;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(28px,5vw,38px);line-height:1.15}
+h2{font-size:24px}
+h3{font-size:14px;margin:0;font-weight:600}
+p{margin:0}
+a{color:var(--blue)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:flex-end}
+.stamp{font-size:13px;color:var(--muted);text-align:right}
+.stamp b{color:var(--ink);font-weight:600}
+@media (max-width:620px){.stamp{text-align:left}}
+.note{color:var(--muted);font-size:13px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.pad{padding:16px 18px}
+section{display:grid;gap:14px;scroll-margin-top:12px}
+.shead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.shead .l{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+/* status */
+.rag{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.rag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.rag.red{background:var(--red-bg);color:var(--red)}.rag.amber{background:var(--amber-bg);color:var(--amber)}
+.rag.green{background:var(--green-bg);color:var(--green)}.rag.grey{background:var(--grey-bg);color:var(--grey)}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:760px){.strip{grid-template-columns:1fr 1fr}}
+.strip a{display:grid;gap:8px;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.strip a:hover{border-color:var(--muted)}
+.strip .t{font-size:13px;color:var(--muted)}
+/* report */
+.report{border-left:4px solid var(--blue)}
+.report dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px}
+.report dt{font-weight:600;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+.report dd{margin:0}
+@media (max-width:520px){.report dl{grid-template-columns:1fr;gap:2px}.report dd{margin-bottom:8px}}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--ink);color:var(--panel);border-radius:8px;padding:9px 14px;font:600 13px var(--body);cursor:pointer}
+.btn:hover{opacity:.9}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding-top:14px;margin-top:14px;border-top:1px solid var(--line)}
+/* stats */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600;text-align:right;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+tr:last-child td{border-bottom:0}
+td .s{display:block;font-size:12px;color:var(--muted)}
+.lvl{font-weight:600}.lvl.red{color:var(--red)}.lvl.amber{color:var(--amber)}.lvl.green{color:var(--green)}.lvl.grey{color:var(--grey)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media (max-width:520px){.tiles{grid-template-columns:1fr}}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.tile .k{font-size:13px;color:var(--muted)}
+.tile .v{font-size:30px;font-weight:600;line-height:1.15;font-variant-numeric:tabular-nums}
+.tile .n{font-size:13px;color:var(--muted)}
+.callout{border-radius:12px;padding:14px 16px;font-size:14px}
+.callout.red{background:var(--red-bg);color:var(--red)}.callout.amber{background:var(--amber-bg);color:var(--amber)}
+.callout.green{background:var(--green-bg);color:var(--green)}.callout.grey{background:var(--grey-bg);color:var(--muted)}
+.callout b{font-weight:600}
+.ph{border:1px dashed var(--line);border-radius:12px;padding:12px 14px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.flags{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.flags li{border-radius:10px;padding:10px 12px;font-size:14px}
+.flags li.red{background:var(--red-bg);color:var(--red)}.flags li.amber{background:var(--amber-bg);color:var(--amber)}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;padding:2px 7px;border-radius:999px;background:var(--soft);color:var(--muted);margin-left:4px;white-space:nowrap}
+.wrapname{overflow-wrap:anywhere}
+.src{font-size:12px;color:var(--muted)}
+/* chart */
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;touch-action:pan-y}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:8px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:4px}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--panel);font-size:12.5px;line-height:1.45;padding:7px 10px;border-radius:8px;white-space:nowrap;transform:translate(-50%,-100%);display:none;z-index:3}
+.tip b{font-weight:600}
+@media (max-width:520px){
+  .stack thead{display:none}
+  .stack tr{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .stack tr:last-child{border-bottom:0}
+  .stack td{border:0;padding:2px 12px;text-align:left}
+  .stack td[data-l]::before{content:attr(data-l) ": ";color:var(--muted);font-size:12px}
+  .stack td.first{grid-column:1/-1;font-weight:600}
+}
+footer{color:var(--muted);font-size:13px;display:grid;gap:6px}
+</style>
+</head>
+<body>
+<main id="app">
+  <header class="top">
+    <div>
+      <p class="eyebrow">NBR Education · internal</p>
+      <h1>Daily KPIs</h1>
+    </div>
+    <div class="stamp" id="stamp">Loading…</div>
+  </header>
+  <noscript>This page needs JavaScript to show the numbers.</noscript>
+</main>
+<script>
+const $ = (h) => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstChild; };
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const n = (v) => v == null ? '–' : Number(v).toLocaleString('en-US');
+const p = (v, d=1) => v == null ? '–' : `${Number(v).toFixed(d)}%`;
+const usd = (v) => v == null ? '–' : '$' + Math.round(v).toLocaleString('en-US');
+const rag = (s, label) => `<span class="rag ${s}">${esc(label || {red:'Red',amber:'Amber',green:'Green',grey:'No data'}[s] || s)}</span>`;
+const when = (iso) => { if (!iso) return 'never'; const d = new Date(iso);
+  return d.toLocaleString('en-US', {timeZone:'America/New_York', weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit'}) + ' ET'; };
+const ago = (iso) => { if (!iso) return ''; const h = (Date.now() - new Date(iso)) / 36e5; return h < 1 ? 'under an hour ago' : h < 48 ? `${Math.round(h)} h ago` : `${Math.round(h/24)} days ago`; };
+const day = (s) => new Date(s + 'T12:00:00').toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'});
+
+fetch('data.json?t=' + Date.now()).then(r => r.json()).then(render).catch(e => {
+  document.getElementById('stamp').textContent = 'Could not load data.json';
+});
+
+function render(D) {
+  const app = document.getElementById('app'), E = D.mail, A = D.access, M = D.money, X = D.next;
+  const apiLabel = {api:'GHL API', 'chrome-bootstrap':'one-off Chrome read (API token not set up yet)', 'previous-run':'last good API read', none:'not read'}[D.api_source] || D.api_source;
+  document.getElementById('stamp').innerHTML =
+    `Last updated <b>${when(D.updated_at)}</b><br>Payments, buyers, campaigns: ${esc(apiLabel)}, ${when(D.api_read_at)}<br>` +
+    `GHL email screens (UI-only): read ${when(E.ui_read_at)} <span class="${E.ui_stale ? 'lvl amber' : ''}">(${ago(E.ui_read_at)}${E.ui_stale ? ', stale' : ''})</span>`;
+
+  const S = D.status;
+  app.append($(`<nav class="strip" aria-label="Section status">
+    <a href="#email"><span class="t">1 · Is email working?</span>${rag(S.mail)}</a>
+    <a href="#access"><span class="t">2 · Did buyers get access?</span>${rag(S.access)}</a>
+    <a href="#money"><span class="t">3 · Is it making money?</span>${rag(S.money)}</a>
+    <a href="#next"><span class="t">4 · What's going out next</span>${rag(S.next)}</a></nav>`));
+
+  const R = D.report;
+  const rep = $(`<section class="panel pad report" aria-label="Daily report"><dl>
+    <dt>Headline</dt><dd>${esc(R.headline)}</dd><dt>Win</dt><dd>${esc(R.win)}</dd><dt>Watch</dt><dd>${esc(R.watch)}</dd></dl>
+    <div class="row"><span class="note">Daily report for ${day(D.today)} · rules fixed in config.json</span>
+    <button class="btn" type="button" id="copy">Copy daily report</button></div></section>`);
+  app.append(rep);
+  rep.querySelector('#copy').onclick = async (ev) => {
+    let txt = R.text; try { txt = (await (await fetch('report.txt?t=' + Date.now())).text()).trim(); } catch (e) {}
+    try { await navigator.clipboard.writeText(txt); ev.target.textContent = 'Copied'; }
+    catch (e) { const ta = document.createElement('textarea'); ta.value = txt; document.body.append(ta); ta.select(); document.execCommand('copy'); ta.remove(); ev.target.textContent = 'Copied'; }
+    setTimeout(() => ev.target.textContent = 'Copy daily report', 1800);
+  };
+
+  /* ---------- 1. email */
+  const Y = E.yesterday || {}, W = E.last7 || {};
+  const s = E.sending || {};
+  const sendTxt = {blocked:'Blocked', limited:'Limited', normal:'Normal', unknown:'Not read'}[s.state] || s.state;
+  const row = (label, a, b, sub) => `<tr><td>${label}${sub ? `<span class="s">${sub}</span>` : ''}</td><td>${a}</td><td>${b}</td></tr>`;
+  const blk = (t) => t && t.blocks != null ? `${n(t.blocks)}<span class="s">${p(t.block_pct)}</span>` : '<span class="s">not read</span>';
+  const em = $(`<section id="email">
+    <div class="shead"><div class="l"><h2>1 · Is email working?</h2>${rag(E.status)}</div>
+      <span class="src">Source: GHL Email Analytics + Bounce Classification (UI-only)</span></div>
+    <div class="callout ${s.state === 'blocked' ? 'red' : s.state === 'limited' ? 'amber' : s.state === 'normal' ? 'green' : 'grey'}">
+      <b>GHL sending status: ${esc(sendTxt)}</b>${s.until_label ? ` · ${esc(s.until_label)}` : ''}<br>${esc(s.title || '')}
+      ${s.note ? `<br><span style="opacity:.85">${esc(s.note)}</span>` : ''}</div>
+    <div class="grid2">
+      <div class="panel"><table>
+        <thead><tr><th>Email</th><th>Yesterday<br><span style="text-transform:none;letter-spacing:0;font-weight:500">${day(E.yesterday_date)}</span></th><th>Last 7 days<br><span style="text-transform:none;letter-spacing:0;font-weight:500">${day(E.window[0])} – ${day(E.window[1])}</span></th></tr></thead>
+        <tbody>
+          ${row('Sent', n(Y.sent), n(W.sent))}
+          ${row('Delivered', `${p(Y.delivered_pct)}<span class="s">${n(Y.delivered)}</span>`, `${p(W.delivered_pct)}<span class="s">${n(W.delivered)}</span>`)}
+          ${row('Bounces', `${p(Y.bounce_pct)}<span class="s">${n(Y.bounced)}</span>`, `${p(W.bounce_pct)}<span class="s">${n(W.bounced)}</span>`)}
+          ${row('Provider blocks', blk(Y), blk(W), 'ESP/ISP blocks')}
+          ${row('Complaints', `${n(Y.complained)}<span class="s">${p(Y.complaint_pct, 2)}</span>`, `${n(W.complained)}<span class="s">${p(W.complaint_pct, 2)}</span>`)}
+          ${row('Unsubscribes', n(Y.unsubscribed), n(W.unsubscribed))}
+          ${row('Failed', n(Y.failed), n(W.failed), 'not sent by GHL (blocked)')}
+        </tbody></table></div>
+      <div class="panel"><table class="stack">
+        <thead><tr><th>Check</th><th>Value</th><th>Status</th></tr></thead>
+        <tbody>${E.lines.map(l => `<tr><td class="first">${esc(l.metric)} <span class="s" style="display:inline">· ${esc(l.period)}</span></td>
+          <td data-l="Value">${typeof l.value === 'number' ? p(l.value, l.metric === 'Complaints' ? 2 : 1) : esc(l.value ?? '–')}</td>
+          <td><span class="lvl ${l.level}">${esc({red:'Red',amber:'Amber',green:'Green',grey:'–'}[l.level])}</span><span class="s">${esc(l.rule)}</span></td></tr>`).join('')}</tbody></table></div>
+    </div>
+    <div class="panel pad chart"><h3>Last 14 days: delivered % and bounce %</h3>
+      <div class="legend" style="margin-top:8px"><span><i style="background:var(--c1)"></i>Delivered % of sent</span><span><i style="background:var(--c2)"></i>Bounce % of sent</span></div>
+      <div id="chart"></div><div class="tip" id="tip"></div>
+      <p class="note" style="margin-top:6px">Hover or tap a day. Bars under the line show emails sent. Days that failed in GHL (blocked) are not counted as sent.</p></div>
+    ${E.today_so_far ? `<p class="note">Today so far (${esc(E.today_so_far.as_of || '')}): ${n(E.today_so_far.sent)} sent, ${n(E.today_so_far.failed)} failed.</p>` : ''}
+    ${E.top_blocks ? `<p class="note">Top provider blocks yesterday: ${E.top_blocks.map(b => `${esc(b[0])} (${esc(b[1])}): ${n(b[2])}`).join(' · ')}</p>` : ''}
+    <div class="ph"><span>Gmail domain reputation (Google Postmaster)</span><b>Not connected yet</b></div>
+  </section>`);
+  app.append(em);
+  drawChart(E.trend || []);
+
+  /* ---------- 2. access */
+  app.append($(`<section id="access">
+    <div class="shead"><div class="l"><h2>2 · Did every buyer get their access?</h2>${rag(A.status, A.paid ? null : 'No buyers')}</div>
+      <span class="src">Paid orders ${day(A.window[0])} – ${day(A.window[1])} · matched = the access automation reached them within ${A.within_hours} h</span></div>
+    <div class="panel"><table class="stack">
+      <thead><tr><th>Product</th><th>Access automation</th><th>Matched</th><th></th></tr></thead>
+      <tbody>${A.rows.map(r => `<tr><td class="first">${esc(r.label)}<span class="tag">${esc(r.brand)}</span></td>
+        <td data-l="Automation" class="wrapname">${esc(r.workflow)}<span class="s">${esc(r.workflow_status)} · proof: ${esc(r.proof)}</span></td>
+        <td data-l="Matched">${r.paid ? `<span class="lvl ${r.unmatched ? 'red' : 'green'}">${r.matched} of ${r.paid}</span>` : '<span class="s" style="display:inline">no buyers</span>'}</td>
+        <td>${r.unmatched ? `<a href="${esc(r.open_orders)}" target="_blank" rel="noopener">Open orders in GHL</a><span class="s"><a href="${esc(r.open_workflow)}" target="_blank" rel="noopener">Open workflow</a></span>` : ''}</td></tr>`).join('')}</tbody></table></div>
+    <p class="note">Counts only. No names, emails or contact IDs are stored on this page.</p>
+  </section>`));
+
+  /* ---------- 3. money */
+  const T = M.totals, B = M.brands;
+  app.append($(`<section id="money">
+    <div class="shead"><div class="l"><h2>3 · Is it making money?</h2>${rag(M.status)}</div><span class="src">Source: GHL Payments (paid, live, after refunds)</span></div>
+    <div class="tiles">
+      <div class="tile"><div class="k">Yesterday</div><div class="v">${usd(T.y[1])}</div><div class="n">${T.y[0]} sale${T.y[0] === 1 ? '' : 's'}</div></div>
+      <div class="tile"><div class="k">Last 7 days</div><div class="v">${usd(T.d7[1])}</div><div class="n">${T.d7[0]} sale${T.d7[0] === 1 ? '' : 's'}</div></div>
+      <div class="tile"><div class="k">Last 30 days</div><div class="v">${usd(T.d30[1])}</div><div class="n">${T.d30[0]} sale${T.d30[0] === 1 ? '' : 's'}</div></div>
+    </div>
+    <div class="grid2">
+      <div class="panel"><table>
+        <thead><tr><th>Brand</th><th>Yesterday</th><th>7 days</th><th>30 days</th></tr></thead>
+        <tbody>${['NBR','BMS','ISLA','Other'].filter(k => k !== 'Other' || B.Other.d30[0]).map(k => `<tr><td>${k}</td>
+          ${['y','d7','d30'].map(w => `<td>${usd(B[k][w][1])}<span class="s">${B[k][w][0]} sale${B[k][w][0] === 1 ? '' : 's'}</span></td>`).join('')}</tr>`).join('')}</tbody></table></div>
+      <div class="panel"><table>
+        <thead><tr><th>Product</th><th>7 days</th><th>30 days</th></tr></thead>
+        <tbody>${M.products.length ? M.products.map(r => `<tr><td class="wrapname">${esc(r.name)}<span class="tag">${esc(r.brand)}</span></td>
+          <td>${usd(r.d7[1])}<span class="s">${r.d7[0]}</span></td><td>${usd(r.d30[1])}<span class="s">${r.d30[0]}</span></td></tr>`).join('') : '<tr><td colspan="3">No paid sales in 30 days.</td></tr>'}</tbody></table></div>
+    </div>
+    <p class="note">${M.zero_orders ? `${M.zero_orders} $0 order${M.zero_orders === 1 ? '' : 's'} left out. ` : ''}${M.failed_payments_30d ? `${M.failed_payments_30d} failed payment${M.failed_payments_30d === 1 ? '' : 's'} in 30 days (not counted). ` : ''}Today's sales show up tomorrow.</p>
+    <div class="panel"><div class="pad" style="padding-bottom:6px"><h3>Email clicks per send (last 7 days)</h3></div>
+      ${M.clicks_state === 'ok' && M.clicks.length ? `<table class="stack"><thead><tr><th>Send (subject)</th><th>Sent</th><th>Clicks</th></tr></thead><tbody>
+        ${M.clicks.map(c => `<tr><td class="first wrapname">${esc(c.name)}<span class="s">from ${day(c.first)}</span></td><td data-l="Sent">${n(c.sent)}</td><td data-l="Clicks">${n(c.clicked)} <span class="s" style="display:inline">${p(c.click_pct)}</span></td></tr>`).join('')}</tbody></table>`
+        : `<p class="note pad" style="padding-top:0">Fills in on the first run with the GHL API token. Account total, last 7 days (GHL Email Analytics): ${n(W.clicked)} clicks on ${n(W.delivered)} delivered (${p(W.delivered ? 100 * W.clicked / W.delivered : null, 2)}).</p>`}</div>
+    <div class="ph"><span>ISLA store sales (islahair.com)</span><b>Shopify not connected yet</b></div>
+  </section>`));
+
+  /* ---------- 4. next */
+  app.append($(`<section id="next">
+    <div class="shead"><div class="l"><h2>4 · What's going out next</h2>${rag(X.status)}</div><span class="src">Scheduled email campaigns, next ${X.window_days} days · GHL Email Marketing</span></div>
+    ${X.flags.length ? `<ul class="flags">${X.flags.map(f => `<li class="${f.level}">${esc(f.text)}</li>`).join('')}</ul>` : ''}
+    <div class="panel"><table class="stack">
+      <thead><tr><th>When (ET)</th><th>Name</th><th>Brand</th><th>Audience</th></tr></thead>
+      <tbody>${X.rows.length ? X.rows.map(r => `<tr><td class="first">${esc(r.date)}, ${esc(r.time)}${r.overdue ? ' <span class="tag">overdue</span>' : ''}</td>
+        <td data-l="Name" class="wrapname" style="text-align:left">${esc(r.name)}<span class="s">${esc(r.channel)}</span></td>
+        <td data-l="Brand">${esc(r.brand)}</td>
+        <td data-l="Audience">${r.audience ? '~' + n(r.audience) : '–'}<span class="s">${esc(r.audience_note)}</span></td></tr>`).join('')
+        : '<tr><td colspan="4">Nothing scheduled.</td></tr>'}</tbody></table></div>
+    <p class="note">${esc(X.sms_note)}</p>
+  </section>`));
+
+  app.append($(`<footer><p>Totals only, read-only from GHL location “Natural Beaded Rows (NBR)”. Updates at about 6 AM, noon, 6 PM and midnight ET; the GHL email screens update when they are re-read on the Mac (time shown at the top).</p></footer>`));
+}
+
+function drawChart(rows) {
+  const box = document.getElementById('chart'), tip = document.getElementById('tip');
+  if (!rows.length) { box.innerHTML = '<p class="note">No daily numbers yet.</p>'; return; }
+  const W = 640, H = 240, L = 36, Rr = 12, T = 12, Bm = 28, iw = W - L - Rr, ih = H - T - Bm;
+  const x = i => L + (rows.length === 1 ? iw / 2 : i * iw / (rows.length - 1));
+  const y = v => T + ih - (v / 100) * ih;
+  const maxSent = Math.max(...rows.map(r => r.sent || 0), 1);
+  const line = k => rows.map((r, i) => r[k] == null ? '' : `${i && rows[i-1][k] != null ? 'L' : 'M'}${x(i).toFixed(1)},${y(r[k]).toFixed(1)}`).join('');
+  const bw = Math.max(4, iw / rows.length * .5);
+  let g = '';
+  [0, 25, 50, 75, 100].forEach(v => g += `<line x1="${L}" x2="${W - Rr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="var(--muted)">${v}%</text>`);
+  rows.forEach((r, i) => { const h = (r.sent || 0) / maxSent * ih * .35;
+    g += `<rect x="${x(i) - bw / 2}" y="${T + ih - h}" width="${bw}" height="${h}" fill="var(--soft)"/>`;
+    if (i % 2 === rows.length % 2 || rows.length < 8) g += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--muted)">${new Date(r.d + 'T12:00:00').getDate()}</text>`; });
+  g += `<path d="${line('delivered_pct')}" fill="none" stroke="var(--c1)" stroke-width="2.5" stroke-linejoin="round"/>`;
+  g += `<path d="${line('bounce_pct')}" fill="none" stroke="var(--c2)" stroke-width="2.5" stroke-linejoin="round"/>`;
+  rows.forEach((r, i) => { if (r.delivered_pct != null) g += `<circle cx="${x(i)}" cy="${y(r.delivered_pct)}" r="3" fill="var(--c1)"/>`;
+    if (r.bounce_pct != null) g += `<circle cx="${x(i)}" cy="${y(r.bounce_pct)}" r="3" fill="var(--c2)"/>`; });
+  g += `<line id="cur" x1="0" x2="0" y1="${T}" y2="${T + ih}" stroke="var(--muted)" stroke-dasharray="3 3" visibility="hidden"/>`;
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Delivered and bounce percent by day">${g}<rect x="${L}" y="0" width="${iw}" height="${H}" fill="transparent" id="hit"/></svg>`;
+  const svg = box.querySelector('svg'), cur = svg.querySelector('#cur');
+  const show = (ev) => {
+    const r0 = svg.getBoundingClientRect(), sx = (ev.clientX - r0.left) * W / r0.width;
+    const i = Math.max(0, Math.min(rows.length - 1, Math.round((sx - L) / (iw / Math.max(1, rows.length - 1)))));
+    const r = rows[i], px = x(i) * r0.width / W, wrap = box.parentElement.getBoundingClientRect();
+    cur.setAttribute('x1', x(i)); cur.setAttribute('x2', x(i)); cur.setAttribute('visibility', 'visible');
+    tip.innerHTML = `<b>${new Date(r.d + 'T12:00:00').toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric'})}</b><br>Delivered ${r.delivered_pct ?? '–'}% · Bounce ${r.bounce_pct ?? '–'}%<br>${(r.sent || 0).toLocaleString()} sent${r.failed ? ` · ${r.failed.toLocaleString()} failed` : ''}`;
+    tip.style.display = 'block';
+    const tw = tip.offsetWidth, left = Math.max(tw / 2 + 4, Math.min(wrap.width - tw / 2 - 4, r0.left - wrap.left + px));
+    tip.style.left = left + 'px'; tip.style.top = (r0.top - wrap.top + y(Math.max(r.delivered_pct ?? 0, r.bounce_pct ?? 0)) * r0.height / H - 8) + 'px';
+  };
+  const hide = () => { tip.style.display = 'none'; cur.setAttribute('visibility', 'hidden'); };
+  svg.addEventListener('pointermove', show); svg.addEventListener('pointerdown', show); svg.addEventListener('pointerleave', hide);
+}
+</script>
+</body>
+</html>

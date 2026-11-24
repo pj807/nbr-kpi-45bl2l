@@ -1,0 +1,704 @@
+{
+ "version": 1,
+ "updated_at": "2026-11-24T06:19:30.225538-05:00",
+ "updated_label": "Tue Nov 24, 6:19 AM ET",
+ "today": "2026-11-24",
+ "yesterday": "2026-11-23",
+ "api_source": "chrome-bootstrap",
+ "api_read_at": "2026-11-24T06:15:00-05:00",
+ "status": {
+  "mail": "red",
+  "access": "green",
+  "money": "green",
+  "next": "red"
+ },
+ "report": {
+  "headline": "Email is not healthy: bounces 20.0% (yesterday).",
+  "win": "All 1 buyer in the last 7 days got their access automation.",
+  "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
+  "text": "NBR daily KPIs, Tue Nov 24, 6:19 AM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: All 1 buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
+ },
+ "mail": {
+  "status": "red",
+  "yesterday": {
+   "sent": 500,
+   "delivered": 400,
+   "opened": 95,
+   "clicked": 0,
+   "bounced": 100,
+   "failed": 4733,
+   "complained": 0,
+   "unsubscribed": 0,
+   "blocks": 99,
+   "days_found": 1,
+   "days_needed": 1,
+   "src": "ui",
+   "delivered_pct": 80.0,
+   "bounce_pct": 20.0,
+   "complaint_pct": 0.0,
+   "block_pct": 19.8
+  },
+  "last7": {
+   "sent": 19808,
+   "delivered": 18718,
+   "opened": 6426,
+   "clicked": 54,
+   "bounced": 705,
+   "failed": 8148,
+   "complained": 1,
+   "unsubscribed": 4,
+   "blocks": 552,
+   "days_found": 7,
+   "days_needed": 7,
+   "src": "ui",
+   "delivered_pct": 94.5,
+   "bounce_pct": 3.6,
+   "complaint_pct": 0.01,
+   "block_pct": 2.8
+  },
+  "yesterday_date": "2026-11-23",
+  "window": [
+   "2026-11-17",
+   "2026-11-23"
+  ],
+  "trend": [
+   {
+    "d": "2026-11-10",
+    "sent": 564,
+    "delivered_pct": 99.5,
+    "bounce_pct": 0.5,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-11",
+    "sent": 1000,
+    "delivered_pct": 94.8,
+    "bounce_pct": 5.2,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-12",
+    "sent": 1439,
+    "delivered_pct": 97.2,
+    "bounce_pct": 2.8,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-13",
+    "sent": 1876,
+    "delivered_pct": 98.0,
+    "bounce_pct": 2.0,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-14",
+    "sent": 2309,
+    "delivered_pct": 96.4,
+    "bounce_pct": 3.6,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-15",
+    "sent": 2775,
+    "delivered_pct": 92.9,
+    "bounce_pct": 7.1,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-16",
+    "sent": 3224,
+    "delivered_pct": 94.7,
+    "bounce_pct": 5.3,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-17",
+    "sent": 3665,
+    "delivered_pct": 96.5,
+    "bounce_pct": 3.5,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-18",
+    "sent": 3939,
+    "delivered_pct": 95.8,
+    "bounce_pct": 2.4,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-19",
+    "sent": 3997,
+    "delivered_pct": 97.8,
+    "bounce_pct": 1.8,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-20",
+    "sent": 3878,
+    "delivered_pct": 92.4,
+    "bounce_pct": 1.9,
+    "failed": 0,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-21",
+    "sent": 3329,
+    "delivered_pct": 95.0,
+    "bounce_pct": 2.7,
+    "failed": 521,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-22",
+    "sent": 500,
+    "delivered_pct": 70.4,
+    "bounce_pct": 29.4,
+    "failed": 2894,
+    "src": "ui"
+   },
+   {
+    "d": "2026-11-23",
+    "sent": 500,
+    "delivered_pct": 80.0,
+    "bounce_pct": 20.0,
+    "failed": 4733,
+    "src": "ui"
+   }
+  ],
+  "lines": [
+   {
+    "metric": "Bounces",
+    "period": "yesterday",
+    "value": 20.0,
+    "level": "red",
+    "rule": "amber over 2% / red over 4%"
+   },
+   {
+    "metric": "Bounces",
+    "period": "7 days",
+    "value": 3.6,
+    "level": "amber",
+    "rule": "amber over 2% / red over 4%"
+   },
+   {
+    "metric": "Complaints",
+    "period": "yesterday",
+    "value": 0.0,
+    "level": "green",
+    "rule": "amber over 0.1% / red over 0.3%"
+   },
+   {
+    "metric": "Complaints",
+    "period": "7 days",
+    "value": 0.01,
+    "level": "green",
+    "rule": "amber over 0.1% / red over 0.3%"
+   },
+   {
+    "metric": "Provider blocks",
+    "period": "yesterday",
+    "value": 19.8,
+    "level": "red",
+    "rule": "red over 1%"
+   },
+   {
+    "metric": "Provider blocks",
+    "period": "7 days",
+    "value": 2.8,
+    "level": "red",
+    "rule": "red over 1%"
+   },
+   {
+    "metric": "GHL sending status",
+    "period": "now",
+    "value": "blocked",
+    "level": "red",
+    "rule": "blocked = red, limited = amber"
+   }
+  ],
+  "worst": {
+   "metric": "Bounces",
+   "period": "yesterday",
+   "value": 20.0,
+   "level": "red",
+   "rule": "amber over 2% / red over 4%"
+  },
+  "sending": {
+   "state": "blocked",
+   "title": "Email sending is blocked due to a high number of spam blocks from email providers.",
+   "until": "2026-11-24T10:04:00-05:00",
+   "note": "Read Nov 24 about 6 AM ET: GHL shows sending blocked until 10:04 AM ET today. BFCM Email 2 is scheduled for 7:00 AM ET.",
+   "until_label": "notice says sending resumes Tue Nov 24, 10:04 AM ET"
+  },
+  "today_so_far": {
+   "date": "2026-11-24",
+   "sent": 0,
+   "failed": 1179,
+   "as_of": "about 6 AM ET"
+  },
+  "ui_read_at": "2026-11-24T06:05:00-05:00",
+  "ui_stale": false,
+  "top_blocks": [
+   [
+    "Gmail",
+    "550 5.7.1 Low Domain Reputation",
+    70
+   ],
+   [
+    "Outlook US",
+    "550 5.7.1 Uncategorized",
+    28
+   ]
+  ],
+  "postmaster": {
+   "state": "not_connected",
+   "text": "Not connected yet"
+  }
+ },
+ "access": {
+  "status": "green",
+  "rows": [
+   {
+    "key": "cert",
+    "label": "NBR Certification",
+    "brand": "NBR",
+    "workflow": "1.0 - NBR Cert Purchase",
+    "workflow_status": "published",
+    "paid": 0,
+    "matched": 0,
+    "unmatched": 0,
+    "proof": "first email",
+    "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
+    "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/bdd159eb-a135-4a8e-b724-149c9d15d999"
+   },
+   {
+    "key": "hsc",
+    "label": "Home Study Course",
+    "brand": "NBR",
+    "workflow": "1.2 HSC: Access, Tags & Welcome",
+    "workflow_status": "published",
+    "paid": 0,
+    "matched": 0,
+    "unmatched": 0,
+    "proof": "first email",
+    "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
+    "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/3c764ce3-bbdf-4151-8b3b-05a2dcde487c"
+   },
+   {
+    "key": "bms",
+    "label": "BMS Academy",
+    "brand": "BMS",
+    "workflow": "1.1: BMS Access, Tags & Welcome",
+    "workflow_status": "published",
+    "paid": 0,
+    "matched": 0,
+    "unmatched": 0,
+    "proof": "first email",
+    "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
+    "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/fbdb4f61-441f-4327-8fb4-91f869c153e3"
+   },
+   {
+    "key": "mm",
+    "label": "Mastermind",
+    "brand": "NBR",
+    "workflow": "Mastermind Order Submitted",
+    "workflow_status": "published",
+    "paid": 0,
+    "matched": 0,
+    "unmatched": 0,
+    "proof": "first email",
+    "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
+    "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/b1fe7cb2-f598-4d94-98d9-29b15e431143"
+   },
+   {
+    "key": "wig",
+    "label": "Wigs",
+    "brand": "ISLA",
+    "workflow": "When Purchase Wig, then add tag",
+    "workflow_status": "published",
+    "paid": 1,
+    "matched": 1,
+    "unmatched": 0,
+    "proof": "tag",
+    "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
+    "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/229caed8-5af1-40dd-aecf-c84a851d33ec"
+   }
+  ],
+  "paid": 1,
+  "unmatched": 0,
+  "window": [
+   "2026-11-17",
+   "2026-11-23"
+  ],
+  "within_hours": 24
+ },
+ "money": {
+  "status": "green",
+  "totals": {
+   "y": [
+    0,
+    0
+   ],
+   "d7": [
+    1,
+    2000.0
+   ],
+   "d30": [
+    3,
+    4795.0
+   ]
+  },
+  "brands": {
+   "NBR": {
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     0,
+     0
+    ],
+    "d30": [
+     2,
+     2795.0
+    ]
+   },
+   "BMS": {
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     0,
+     0
+    ],
+    "d30": [
+     0,
+     0
+    ]
+   },
+   "ISLA": {
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     1,
+     2000.0
+    ],
+    "d30": [
+     1,
+     2000.0
+    ]
+   },
+   "Other": {
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     0,
+     0
+    ],
+    "d30": [
+     0,
+     0
+    ]
+   }
+  },
+  "products": [
+   {
+    "name": "WIGS",
+    "brand": "ISLA",
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     1,
+     2000.0
+    ],
+    "d30": [
+     1,
+     2000.0
+    ]
+   },
+   {
+    "name": "NBR Certification",
+    "brand": "NBR",
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     0,
+     0
+    ],
+    "d30": [
+     1,
+     1800.0
+    ]
+   },
+   {
+    "name": "NBR® Home Study Course",
+    "brand": "NBR",
+    "y": [
+     0,
+     0
+    ],
+    "d7": [
+     0,
+     0
+    ],
+    "d30": [
+     1,
+     995.0
+    ]
+   }
+  ],
+  "zero_orders": 1,
+  "failed_payments_30d": 2,
+  "days_since_sale": 6,
+  "clicks": [],
+  "clicks_state": "waiting_for_token",
+  "shopify": {
+   "state": "not_connected",
+   "text": "Shopify not connected yet"
+  }
+ },
+ "next": {
+  "status": "red",
+  "rows": [
+   {
+    "at": "2026-11-24T07:00:00-05:00",
+    "date": "Tue Nov 24",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 2 - Color Inventory - 11.24.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   },
+   {
+    "at": "2026-11-25T07:00:00-05:00",
+    "date": "Wed Nov 25",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   },
+   {
+    "at": "2026-11-27T07:00:00-05:00",
+    "date": "Fri Nov 27",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   },
+   {
+    "at": "2026-11-28T07:00:00-05:00",
+    "date": "Sat Nov 28",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   },
+   {
+    "at": "2026-11-29T07:00:00-05:00",
+    "date": "Sun Nov 29",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 6 - Make The Switch - 11.29.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   },
+   {
+    "at": "2026-11-30T07:00:00-05:00",
+    "date": "Mon Nov 30",
+    "time": "7:00 am",
+    "name": "[ISLA] BFCM Email 7 - Last Day - 11.30.26",
+    "brand": "ISLA",
+    "channel": "Email",
+    "audience": 4427,
+    "audience_note": "about, from BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter",
+    "overdue": false
+   }
+  ],
+  "flags": [
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 2 - Color Inventory - 11.24.26 (Tue Nov 24) goes to about 4,427 contacts while email is red."
+   },
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26 (Wed Nov 25) goes to about 4,427 contacts while email is red."
+   },
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26 (Fri Nov 27) goes to about 4,427 contacts while email is red."
+   },
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26 (Sat Nov 28) goes to about 4,427 contacts while email is red."
+   },
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 6 - Make The Switch - 11.29.26 (Sun Nov 29) goes to about 4,427 contacts while email is red."
+   },
+   {
+    "level": "red",
+    "text": "[ISLA] BFCM Email 7 - Last Day - 11.30.26 (Mon Nov 30) goes to about 4,427 contacts while email is red."
+   }
+  ],
+  "window_days": 7,
+  "sms_note": "Scheduled SMS (Bulk Actions) can't be read by the API yet; check GHL if any are planned."
+ },
+ "_src": {
+  "payments": [
+   {
+    "at": "2026-11-17T18:14:39-05:00",
+    "amount": 2000,
+    "items": [
+     [
+      "WIGS",
+      4,
+      500
+     ]
+    ],
+    "access": {
+     "wig": "tag"
+    }
+   },
+   {
+    "at": "2026-11-17T17:02:24-05:00",
+    "amount": 0,
+    "items": [
+     [
+      "WIGS",
+      3,
+      500
+     ]
+    ],
+    "access": {
+     "wig": "tag"
+    }
+   },
+   {
+    "at": "2026-10-26T15:35:27-04:00",
+    "amount": 1800,
+    "items": [
+     [
+      "NBR Certification",
+      1,
+      1800
+     ]
+    ],
+    "access": {}
+   },
+   {
+    "at": "2026-10-25T15:24:38-04:00",
+    "amount": 995,
+    "items": [
+     [
+      "NBR® Home Study Course",
+      1,
+      995
+     ]
+    ],
+    "access": {}
+   }
+  ],
+  "failed_payments_30d": 2,
+  "campaigns": [
+   {
+    "name": "[ISLA] BFCM Email 2 - Color Inventory - 11.24.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1795521600000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1795608000000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1795780800000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1795867200000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 6 - Make The Switch - 11.29.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1795953600000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 7 - Last Day - 11.30.26",
+    "status": "active",
+    "emailStatus": "scheduled",
+    "next_ms": 1796040000000,
+    "total": null,
+    "processed": 0
+   },
+   {
+    "name": "[ISLA] BFCM Email 1 - Sale Launch - 11.23.26",
+    "status": "pause",
+    "emailStatus": "paused",
+    "next_ms": 1795456260000,
+    "total": 4427,
+    "processed": 3900
+   }
+  ],
+  "workflows_live": {
+   "1.0 - NBR Cert Purchase": "published",
+   "1.2 HSC: Access, Tags & Welcome": "published",
+   "1.1 HSC w/ Feedback: Access, Tags & Welcome": "published",
+   "1.1: BMS Access, Tags & Welcome": "published",
+   "Mastermind Order Submitted": "published",
+   "When Purchase Wig, then add tag": "published"
+  },
+  "email_days": {},
+  "sends": [],
+  "read_at": "2026-11-24T06:15:00-05:00"
+ }
+}

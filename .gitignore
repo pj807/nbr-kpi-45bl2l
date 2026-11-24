@@ -1,0 +1,9 @@
+# Private cache and secrets never go to GitHub
+data/raw/
+.env
+*.env
+.env.*
+*.csv
+.DS_Store
+__pycache__/
+*.tmp

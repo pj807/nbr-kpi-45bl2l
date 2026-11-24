@@ -1,0 +1,116 @@
+{
+ "_note": "Settings for the NBR KPI dashboard. Safe to publish: no secrets, no contact data, no coupon codes.",
+ "location_id": "JResmiMkYCKiyhmQ3Aa3",
+ "forbidden_location_sha256": ["57dab83bde7432cfc371dc7bbe32eeb6ad582de6638e64b74af116f493a44792"],
+ "_forbidden_note": "The WUW location, stored as a hash so its ID is not published here. pull.py refuses any request that names it.",
+ "timezone": "America/New_York",
+ "ghl_app": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3",
+
+ "email_lines": {
+  "_how": "Each line is checked for yesterday and for the last 7 days; the section takes the worst. Rates use GHL's own Email Analytics base: per email sent.",
+  "bounce_pct": {"amber_over": 2, "red_over": 4, "label": "Bounces"},
+  "complaint_pct": {"amber_over": 0.1, "red_over": 0.3, "label": "Complaints"},
+  "block_pct": {"red_over": 1, "label": "Provider blocks"},
+  "ghl_block": {"red_if": ["blocked"], "amber_if": ["limited"], "label": "GHL sending status"},
+  "min_sent_for_rate": 50
+ },
+ "ui_stale_hours": 30,
+
+ "brands": {
+  "_how": "Product name -> brand. First match wins (case-insensitive 'starts with'). Unknown products show as 'Other'.",
+  "rules": [
+   ["NBR Certification", "NBR"],
+   ["NBR® Home Study Course", "NBR"],
+   ["NBR: Home Study Course", "NBR"],
+   ["NBR Membership", "NBR"],
+   ["Big Money Stylist", "BMS"],
+   ["Book Big Money Stylist", "BMS"],
+   ["Audiobook Big Money Stylist", "BMS"],
+   ["International Shipping - Big Money Stylist", "BMS"],
+   ["BMS", "BMS"],
+   ["WIGS", "ISLA"],
+   ["Wig Deposit", "ISLA"],
+   ["ISLA", "ISLA"]
+  ],
+  "_confirm": "[CONFIRM] Wigs (nbr.education/wigs checkout) are counted as ISLA."
+ },
+
+ "access_checks": {
+  "_how": "For every paid order in the last 7 days (amount > 0) whose product matches 'products', the buyer counts as MATCHED when the access workflow left its mark within 'within_hours' of paying: one of 'proof_subjects' was sent to them (any status, even failed: the workflow still ran), or, for workflows that send nothing, the buyer carries one of 'proof_tags'. Counts only are published.",
+  "within_hours": 24,
+  "products": [
+   {"key": "cert", "label": "NBR Certification", "brand": "NBR",
+    "products": ["NBR Certification"],
+    "workflow": "1.0 - NBR Cert Purchase", "workflow_id": "bdd159eb-a135-4a8e-b724-149c9d15d999",
+    "proof_subjects": ["You’re In! NBR® Certification"], "proof_tags": ["event_nbr_certification"]},
+   {"key": "hsc", "label": "Home Study Course", "brand": "NBR",
+    "products": ["NBR® Home Study Course", "NBR: Home Study Course"],
+    "workflow": "1.2 HSC: Access, Tags & Welcome", "workflow_id": "3c764ce3-bbdf-4151-8b3b-05a2dcde487c",
+    "also_workflows": ["1.1 HSC w/ Feedback: Access, Tags & Welcome"],
+    "proof_subjects": ["NBR Home Study Course Confirmation", "NBR Home Study Course: Login Information"], "proof_tags": []},
+   {"key": "bms", "label": "BMS Academy", "brand": "BMS",
+    "products": ["Big Money Stylist", "BMS Academy"],
+    "workflow": "1.1: BMS Access, Tags & Welcome", "workflow_id": "fbdb4f61-441f-4327-8fb4-91f869c153e3",
+    "proof_subjects": ["BMS Academy Confirmation", "BMS Academy: Login Information"], "proof_tags": [],
+    "_confirm": "[CONFIRM] 'Big Money Stylist' is the BMS Academy product (the Academy's own product is no longer in the store)."},
+   {"key": "mm", "label": "Mastermind", "brand": "NBR",
+    "products": ["NBR Membership - Monthly"],
+    "workflow": "Mastermind Order Submitted", "workflow_id": "b1fe7cb2-f598-4d94-98d9-29b15e431143",
+    "proof_subjects": ["You’re In! Your NBR® Registration Has Been Received 🙌"], "proof_tags": ["prog_nbr_mastermind"]},
+   {"key": "wig", "label": "Wigs", "brand": "ISLA",
+    "products": ["WIGS"],
+    "workflow": "When Purchase Wig, then add tag", "workflow_id": "229caed8-5af1-40dd-aecf-c84a851d33ec",
+    "proof_subjects": [], "proof_tags": ["purchase_wig"]}
+  ]
+ },
+
+ "money_lines": {
+  "_how": "Section status: green = at least one paid sale in the last 7 days; amber = none in 7 days; red = none in 30 days.",
+  "amber_if_no_sale_days": 7,
+  "red_if_no_sale_days": 30
+ },
+
+ "next_sends": {
+  "window_days": 7,
+  "gap_days_amber": 5,
+  "big_send_contacts": 3000,
+  "_how": "Flags: (1) a gap of more than gap_days_amber days with no scheduled send inside the window (from now to the end of the window); (2) any single send over big_send_contacts while the email section is amber or red. Audience size: GHL fixes the list when a send starts, so a scheduled send has no count yet; audience_hints gives the last real list size of the same series.",
+  "audience_hints": [
+   {"name_starts": "[ISLA] BFCM Email", "contacts": 4427, "source": "BFCM Email 1 list size when it started (Nov 23); Emails 2-7 use the same 'opened in the last 60 days' filter"}
+  ],
+  "brand_from_name": [["[ISLA]", "ISLA"], ["[NBR", "NBR"], ["[BMS]", "BMS"], ["ISLA", "ISLA"], ["BMS", "BMS"], ["NBR", "NBR"]]
+ },
+
+ "report_rules": {
+  "_how": "The daily report is built from these fixed rules, top to bottom; the first one that applies is used for each line.",
+  "headline": [
+   "email red -> 'Email is not healthy: <worst line>.'",
+   "email amber -> 'Email needs watching: <worst line>.'",
+   "otherwise -> '<sales 7d> sales in 7 days ($<revenue 7d>); email is healthy.'"
+  ],
+  "win": [
+   "a paid sale yesterday -> '<n> sale(s) yesterday, $<revenue>.'",
+   "every buyer in the last 7 days matched -> 'All <n> buyers in the last 7 days got their access automation.'",
+   "delivered % yesterday >= 95 -> 'Delivered <x>% of email yesterday.'",
+   "otherwise -> 'No win to report today.'"
+  ],
+  "watch": [
+   "GHL sending blocked or limited -> 'GHL sending is <state>: <notice>.'",
+   "a send over the size limit while email is amber/red -> '<name> (<date>) goes to about <n> contacts while email is <status>.'",
+   "an unmatched buyer -> '<n> buyer(s) with no access automation: open in GHL.'",
+   "a gap with no sends -> 'No sends scheduled for <n> days (<from> to <to>).'",
+   "nothing -> 'Nothing to watch.'"
+  ]
+ },
+
+ "shopify": {
+  "enabled": false,
+  "_how": "Later: set enabled true, store_domain, and add the repo secret SHOPIFY_TOKEN (a read-only Admin API token with read_orders only). pull.py then adds ISLA store sales.",
+  "store_domain": "islahair.com",
+  "secret_env": "SHOPIFY_TOKEN"
+ },
+ "postmaster": {
+  "enabled": false,
+  "_how": "Later: Gmail domain reputation from Google Postmaster Tools. GHL shows it under Email Services > Postmaster Tools (UI-only today)."
+ }
+}
