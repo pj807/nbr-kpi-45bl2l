@@ -1,76 +1,51 @@
 {
  "version": 1,
- "updated_at": "2026-11-24T18:02:04.573516-05:00",
- "updated_label": "Tue Nov 24, 6:02 PM ET",
- "today": "2026-11-24",
- "yesterday": "2026-11-23",
+ "updated_at": "2026-11-25T00:18:18.985572-05:00",
+ "updated_label": "Wed Nov 25, 12:18 AM ET",
+ "today": "2026-11-25",
+ "yesterday": "2026-11-24",
  "api_source": "previous-run",
  "api_origin": "chrome-bootstrap",
  "api_read_at": "2026-11-24T06:15:00-05:00",
  "status": {
   "mail": "red",
-  "access": "green",
-  "money": "green",
+  "access": "grey",
+  "money": "amber",
   "next": "red"
  },
  "report": {
-  "headline": "Email is not healthy: bounces 20.0% (yesterday).",
-  "win": "The only buyer in the last 7 days got their access automation.",
+  "headline": "Email is not healthy: GHL sending status blocked.",
+  "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Tue Nov 24, 6:02 PM ET\nHeadline: Email is not healthy: bounces 20.0% (yesterday).\nWin: The only buyer in the last 7 days got their access automation.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREEN | Money GREEN | Next sends RED\nSales: yesterday 0 ($0), 7 days 1 ($2,000), 30 days 3 ($4,795)"
+  "text": "NBR daily KPIs, Wed Nov 25, 12:18 AM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 2 ($3,800)"
  },
  "mail": {
   "status": "red",
-  "yesterday": {
-   "sent": 500,
-   "delivered": 400,
-   "opened": 95,
-   "clicked": 0,
-   "bounced": 100,
-   "failed": 4733,
-   "complained": 0,
-   "unsubscribed": 0,
-   "blocks": 99,
-   "days_found": 1,
-   "days_needed": 1,
-   "src": "ui",
-   "delivered_pct": 80.0,
-   "bounce_pct": 20.0,
-   "complaint_pct": 0.0,
-   "block_pct": 19.8
-  },
+  "yesterday": null,
   "last7": {
-   "sent": 19808,
-   "delivered": 18718,
-   "opened": 6426,
-   "clicked": 54,
-   "bounced": 705,
+   "sent": 16143,
+   "delivered": 15182,
+   "opened": 4785,
+   "clicked": 40,
+   "bounced": 577,
    "failed": 8148,
    "complained": 1,
    "unsubscribed": 4,
-   "blocks": 552,
-   "days_found": 7,
+   "blocks": null,
+   "days_found": 6,
    "days_needed": 7,
    "src": "ui",
-   "delivered_pct": 94.5,
+   "delivered_pct": 94.0,
    "bounce_pct": 3.6,
    "complaint_pct": 0.01,
-   "block_pct": 2.8
+   "block_pct": null
   },
-  "yesterday_date": "2026-11-23",
+  "yesterday_date": "2026-11-24",
   "window": [
-   "2026-11-17",
-   "2026-11-23"
+   "2026-11-18",
+   "2026-11-24"
   ],
   "trend": [
-   {
-    "d": "2026-11-10",
-    "sent": 564,
-    "delivered_pct": 99.5,
-    "bounce_pct": 0.5,
-    "failed": 0,
-    "src": "ui"
-   },
    {
     "d": "2026-11-11",
     "sent": 1000,
@@ -180,8 +155,8 @@
    {
     "metric": "Bounces",
     "period": "yesterday",
-    "value": 20.0,
-    "level": "red",
+    "value": null,
+    "level": "grey",
     "rule": "amber over 2% / red over 4%"
    },
    {
@@ -194,8 +169,8 @@
    {
     "metric": "Complaints",
     "period": "yesterday",
-    "value": 0.0,
-    "level": "green",
+    "value": null,
+    "level": "grey",
     "rule": "amber over 0.1% / red over 0.3%"
    },
    {
@@ -208,15 +183,15 @@
    {
     "metric": "Provider blocks",
     "period": "yesterday",
-    "value": 19.8,
-    "level": "red",
+    "value": null,
+    "level": "grey",
     "rule": "red over 1%"
    },
    {
     "metric": "Provider blocks",
     "period": "7 days",
-    "value": 2.8,
-    "level": "red",
+    "value": null,
+    "level": "grey",
     "rule": "red over 1%"
    },
    {
@@ -228,11 +203,11 @@
    }
   ],
   "worst": {
-   "metric": "Bounces",
-   "period": "yesterday",
-   "value": 20.0,
+   "metric": "GHL sending status",
+   "period": "now",
+   "value": "blocked",
    "level": "red",
-   "rule": "amber over 2% / red over 4%"
+   "rule": "blocked = red, limited = amber"
   },
   "sending": {
    "state": "blocked",
@@ -267,7 +242,7 @@
   }
  },
  "access": {
-  "status": "green",
+  "status": "grey",
   "rows": [
    {
     "key": "cert",
@@ -327,36 +302,36 @@
     "brand": "ISLA",
     "workflow": "When Purchase Wig, then add tag",
     "workflow_status": "published",
-    "paid": 1,
-    "matched": 1,
+    "paid": 0,
+    "matched": 0,
     "unmatched": 0,
     "proof": "tag",
     "open_orders": "https://app.gohighlevel.com/v2/location/JResmiMkYCKiyhmQ3Aa3/payments/v2/orders",
     "open_workflow": "https://app.gohighlevel.com/location/JResmiMkYCKiyhmQ3Aa3/workflow/229caed8-5af1-40dd-aecf-c84a851d33ec"
    }
   ],
-  "paid": 1,
+  "paid": 0,
   "unmatched": 0,
   "window": [
-   "2026-11-17",
-   "2026-11-23"
+   "2026-11-18",
+   "2026-11-24"
   ],
   "within_hours": 24
  },
  "money": {
-  "status": "green",
+  "status": "amber",
   "totals": {
    "y": [
     0,
     0
    ],
    "d7": [
-    1,
-    2000.0
+    0,
+    0
    ],
    "d30": [
-    3,
-    4795.0
+    2,
+    3800.0
    ]
   },
   "brands": {
@@ -370,8 +345,8 @@
      0
     ],
     "d30": [
-     2,
-     2795.0
+     1,
+     1800.0
     ]
    },
    "BMS": {
@@ -394,8 +369,8 @@
      0
     ],
     "d7": [
-     1,
-     2000.0
+     0,
+     0
     ],
     "d30": [
      1,
@@ -426,8 +401,8 @@
      0
     ],
     "d7": [
-     1,
-     2000.0
+     0,
+     0
     ],
     "d30": [
      1,
@@ -449,27 +424,11 @@
      1,
      1800.0
     ]
-   },
-   {
-    "name": "NBR® Home Study Course",
-    "brand": "NBR",
-    "y": [
-     0,
-     0
-    ],
-    "d7": [
-     0,
-     0
-    ],
-    "d30": [
-     1,
-     995.0
-    ]
    }
   ],
   "zero_orders": 1,
   "failed_payments_30d": 2,
-  "days_since_sale": 6,
+  "days_since_sale": 7,
   "clicks": [],
   "clicks_state": "waiting_for_token",
   "shopify": {
