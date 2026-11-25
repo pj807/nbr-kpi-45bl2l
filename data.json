@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-25T06:02:30.882164-05:00",
- "updated_label": "Wed Nov 25, 6:02 AM ET",
+ "updated_at": "2026-11-25T12:10:43.091859-05:00",
+ "updated_label": "Wed Nov 25, 12:10 PM ET",
  "today": "2026-11-25",
  "yesterday": "2026-11-24",
  "api_source": "previous-run",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: GHL sending status blocked.",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Wed Nov 25, 6:02 AM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 2 ($3,800)"
+  "text": "NBR daily KPIs, Wed Nov 25, 12:10 PM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 2 ($3,800)"
  },
  "mail": {
   "status": "red",
@@ -223,7 +223,7 @@
    "as_of": "about 6 AM ET"
   },
   "ui_read_at": "2026-11-24T06:05:00-05:00",
-  "ui_stale": false,
+  "ui_stale": true,
   "top_blocks": [
    [
     "Gmail",
@@ -440,17 +440,6 @@
   "status": "red",
   "rows": [
    {
-    "at": "2026-11-25T07:00:00-05:00",
-    "date": "Wed Nov 25",
-    "time": "7:00 am",
-    "name": "[ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26",
-    "brand": "ISLA",
-    "channel": "Email",
-    "audience": 4427,
-    "audience_note": "about, from Email 1 list (Nov 23), same filter",
-    "overdue": false
-   },
-   {
     "at": "2026-11-27T07:00:00-05:00",
     "date": "Fri Nov 27",
     "time": "7:00 am",
@@ -498,7 +487,7 @@
   "flags": [
    {
     "level": "red",
-    "text": "5 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Wed Nov 25, Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 3 - Volume Genius Weft - 11.25.26 at 7:00 am."
+    "text": "4 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26 at 7:00 am."
    }
   ],
   "window_days": 7,
