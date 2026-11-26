@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-26T06:02:56.763617-05:00",
- "updated_label": "Thu Nov 26, 6:02 AM ET",
+ "updated_at": "2026-11-26T12:15:18.394144-05:00",
+ "updated_label": "Thu Nov 26, 12:15 PM ET",
  "today": "2026-11-26",
  "yesterday": "2026-11-25",
  "api_source": "previous-run",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: GHL sending status blocked.",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Thu Nov 26, 6:02 AM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
+  "text": "NBR daily KPIs, Thu Nov 26, 12:15 PM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
  },
  "mail": {
   "status": "red",
