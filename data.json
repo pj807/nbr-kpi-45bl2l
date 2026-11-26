@@ -1,9 +1,9 @@
 {
  "version": 1,
- "updated_at": "2026-11-25T17:59:11.004746-05:00",
- "updated_label": "Wed Nov 25, 5:59 PM ET",
- "today": "2026-11-25",
- "yesterday": "2026-11-24",
+ "updated_at": "2026-11-26T00:19:41.627034-05:00",
+ "updated_label": "Thu Nov 26, 12:19 AM ET",
+ "today": "2026-11-26",
+ "yesterday": "2026-11-25",
  "api_source": "previous-run",
  "api_origin": "chrome-bootstrap",
  "api_read_at": "2026-11-24T06:15:00-05:00",
@@ -17,43 +17,35 @@
   "headline": "Email is not healthy: GHL sending status blocked.",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Wed Nov 25, 5:59 PM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 2 ($3,800)"
+  "text": "NBR daily KPIs, Thu Nov 26, 12:19 AM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
  },
  "mail": {
   "status": "red",
   "yesterday": null,
   "last7": {
-   "sent": 16143,
-   "delivered": 15182,
-   "opened": 4785,
-   "clicked": 40,
-   "bounced": 577,
+   "sent": 12204,
+   "delivered": 11410,
+   "opened": 3227,
+   "clicked": 24,
+   "bounced": 483,
    "failed": 8148,
    "complained": 1,
-   "unsubscribed": 4,
+   "unsubscribed": 3,
    "blocks": null,
-   "days_found": 6,
+   "days_found": 5,
    "days_needed": 7,
    "src": "ui",
-   "delivered_pct": 94.0,
-   "bounce_pct": 3.6,
+   "delivered_pct": 93.5,
+   "bounce_pct": 4.0,
    "complaint_pct": 0.01,
    "block_pct": null
   },
-  "yesterday_date": "2026-11-24",
+  "yesterday_date": "2026-11-25",
   "window": [
-   "2026-11-18",
-   "2026-11-24"
+   "2026-11-19",
+   "2026-11-25"
   ],
   "trend": [
-   {
-    "d": "2026-11-11",
-    "sent": 1000,
-    "delivered_pct": 94.8,
-    "bounce_pct": 5.2,
-    "failed": 0,
-    "src": "ui"
-   },
    {
     "d": "2026-11-12",
     "sent": 1439,
@@ -162,7 +154,7 @@
    {
     "metric": "Bounces",
     "period": "7 days",
-    "value": 3.6,
+    "value": 4.0,
     "level": "amber",
     "rule": "amber over 2% / red over 4%"
    },
@@ -313,8 +305,8 @@
   "paid": 0,
   "unmatched": 0,
   "window": [
-   "2026-11-18",
-   "2026-11-24"
+   "2026-11-19",
+   "2026-11-25"
   ],
   "within_hours": 24
  },
@@ -330,8 +322,8 @@
     0
    ],
    "d30": [
-    2,
-    3800.0
+    1,
+    2000.0
    ]
   },
   "brands": {
@@ -345,8 +337,8 @@
      0
     ],
     "d30": [
-     1,
-     1800.0
+     0,
+     0
     ]
    },
    "BMS": {
@@ -408,27 +400,11 @@
      1,
      2000.0
     ]
-   },
-   {
-    "name": "NBR Certification",
-    "brand": "NBR",
-    "y": [
-     0,
-     0
-    ],
-    "d7": [
-     0,
-     0
-    ],
-    "d30": [
-     1,
-     1800.0
-    ]
    }
   ],
   "zero_orders": 1,
   "failed_payments_30d": 2,
-  "days_since_sale": 7,
+  "days_since_sale": 8,
   "clicks": [],
   "clicks_state": "waiting_for_token",
   "shopify": {
