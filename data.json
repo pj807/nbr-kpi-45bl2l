@@ -1,9 +1,9 @@
 {
  "version": 1,
- "updated_at": "2026-11-26T18:02:30.213537-05:00",
- "updated_label": "Thu Nov 26, 6:02 PM ET",
- "today": "2026-11-26",
- "yesterday": "2026-11-25",
+ "updated_at": "2026-11-27T00:19:25.564554-05:00",
+ "updated_label": "Fri Nov 27, 12:19 AM ET",
+ "today": "2026-11-27",
+ "yesterday": "2026-11-26",
  "api_source": "previous-run",
  "api_origin": "chrome-bootstrap",
  "api_read_at": "2026-11-24T06:15:00-05:00",
@@ -14,46 +14,38 @@
   "next": "red"
  },
  "report": {
-  "headline": "Email is not healthy: GHL sending status blocked.",
+  "headline": "Email is not healthy: bounces 5.0% (7 days).",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Thu Nov 26, 6:02 PM ET\nHeadline: Email is not healthy: GHL sending status blocked.\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
+  "text": "NBR daily KPIs, Fri Nov 27, 12:19 AM ET\nHeadline: Email is not healthy: bounces 5.0% (7 days).\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
  },
  "mail": {
   "status": "red",
   "yesterday": null,
   "last7": {
-   "sent": 12204,
-   "delivered": 11410,
-   "opened": 3227,
-   "clicked": 24,
-   "bounced": 483,
+   "sent": 8207,
+   "delivered": 7501,
+   "opened": 1868,
+   "clicked": 13,
+   "bounced": 412,
    "failed": 8148,
    "complained": 1,
-   "unsubscribed": 3,
+   "unsubscribed": 1,
    "blocks": null,
-   "days_found": 5,
+   "days_found": 4,
    "days_needed": 7,
    "src": "ui",
-   "delivered_pct": 93.5,
-   "bounce_pct": 4.0,
+   "delivered_pct": 91.4,
+   "bounce_pct": 5.0,
    "complaint_pct": 0.01,
    "block_pct": null
   },
-  "yesterday_date": "2026-11-25",
+  "yesterday_date": "2026-11-26",
   "window": [
-   "2026-11-19",
-   "2026-11-25"
+   "2026-11-20",
+   "2026-11-26"
   ],
   "trend": [
-   {
-    "d": "2026-11-12",
-    "sent": 1439,
-    "delivered_pct": 97.2,
-    "bounce_pct": 2.8,
-    "failed": 0,
-    "src": "ui"
-   },
    {
     "d": "2026-11-13",
     "sent": 1876,
@@ -154,8 +146,8 @@
    {
     "metric": "Bounces",
     "period": "7 days",
-    "value": 4.0,
-    "level": "amber",
+    "value": 5.0,
+    "level": "red",
     "rule": "amber over 2% / red over 4%"
    },
    {
@@ -195,11 +187,11 @@
    }
   ],
   "worst": {
-   "metric": "GHL sending status",
-   "period": "now",
-   "value": "blocked",
+   "metric": "Bounces",
+   "period": "7 days",
+   "value": 5.0,
    "level": "red",
-   "rule": "blocked = red, limited = amber"
+   "rule": "amber over 2% / red over 4%"
   },
   "sending": {
    "state": "blocked",
@@ -305,8 +297,8 @@
   "paid": 0,
   "unmatched": 0,
   "window": [
-   "2026-11-19",
-   "2026-11-25"
+   "2026-11-20",
+   "2026-11-26"
   ],
   "within_hours": 24
  },
@@ -404,7 +396,7 @@
   ],
   "zero_orders": 1,
   "failed_payments_30d": 2,
-  "days_since_sale": 8,
+  "days_since_sale": 9,
   "clicks": [],
   "clicks_state": "waiting_for_token",
   "shopify": {
