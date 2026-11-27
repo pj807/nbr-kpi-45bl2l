@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-27T05:58:51.172906-05:00",
- "updated_label": "Fri Nov 27, 5:58 AM ET",
+ "updated_at": "2026-11-27T12:15:12.736072-05:00",
+ "updated_label": "Fri Nov 27, 12:15 PM ET",
  "today": "2026-11-27",
  "yesterday": "2026-11-26",
  "api_source": "previous-run",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: bounces 5.0% (7 days).",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Fri Nov 27, 5:58 AM ET\nHeadline: Email is not healthy: bounces 5.0% (7 days).\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
+  "text": "NBR daily KPIs, Fri Nov 27, 12:15 PM ET\nHeadline: Email is not healthy: bounces 5.0% (7 days).\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
  },
  "mail": {
   "status": "red",
@@ -408,17 +408,6 @@
   "status": "red",
   "rows": [
    {
-    "at": "2026-11-27T07:00:00-05:00",
-    "date": "Fri Nov 27",
-    "time": "7:00 am",
-    "name": "[ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26",
-    "brand": "ISLA",
-    "channel": "Email",
-    "audience": 4427,
-    "audience_note": "about, from Email 1 list (Nov 23), same filter",
-    "overdue": false
-   },
-   {
     "at": "2026-11-28T07:00:00-05:00",
     "date": "Sat Nov 28",
     "time": "7:00 am",
@@ -455,7 +444,7 @@
   "flags": [
    {
     "level": "red",
-    "text": "4 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Fri Nov 27, Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 4 - Genius vs Volume Genius - 11.27.26 at 7:00 am."
+    "text": "3 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26 at 7:00 am."
    }
   ],
   "window_days": 7,
