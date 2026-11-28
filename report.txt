@@ -1,5 +1,5 @@
-NBR daily KPIs, Fri Nov 27, 6:01 PM ET
-Headline: Email is not healthy: bounces 5.0% (7 days).
+NBR daily KPIs, Sat Nov 28, 12:08 AM ET
+Headline: Email is not healthy: bounces 7.8% (7 days).
 Win: No win to report today.
 Watch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.
 Email RED | Buyer access GREY | Money AMBER | Next sends RED
