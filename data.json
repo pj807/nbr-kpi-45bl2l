@@ -1,7 +1,7 @@
 {
  "version": 1,
- "updated_at": "2026-11-28T05:55:38.263789-05:00",
- "updated_label": "Sat Nov 28, 5:55 AM ET",
+ "updated_at": "2026-11-28T11:54:42.350371-05:00",
+ "updated_label": "Sat Nov 28, 11:54 AM ET",
  "today": "2026-11-28",
  "yesterday": "2026-11-27",
  "api_source": "previous-run",
@@ -17,7 +17,7 @@
   "headline": "Email is not healthy: bounces 7.8% (7 days).",
   "win": "No win to report today.",
   "watch": "GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.",
-  "text": "NBR daily KPIs, Sat Nov 28, 5:55 AM ET\nHeadline: Email is not healthy: bounces 7.8% (7 days).\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
+  "text": "NBR daily KPIs, Sat Nov 28, 11:54 AM ET\nHeadline: Email is not healthy: bounces 7.8% (7 days).\nWin: No win to report today.\nWatch: GHL sending is blocked: notice says sending resumes Tue Nov 24, 10:04 AM ET.\nEmail RED | Buyer access GREY | Money AMBER | Next sends RED\nSales: yesterday 0 ($0), 7 days 0 ($0), 30 days 1 ($2,000)"
  },
  "mail": {
   "status": "red",
@@ -400,17 +400,6 @@
   "status": "red",
   "rows": [
    {
-    "at": "2026-11-28T07:00:00-05:00",
-    "date": "Sat Nov 28",
-    "time": "7:00 am",
-    "name": "[ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26",
-    "brand": "ISLA",
-    "channel": "Email",
-    "audience": 4427,
-    "audience_note": "about, from Email 1 list (Nov 23), same filter",
-    "overdue": false
-   },
-   {
     "at": "2026-11-29T07:00:00-05:00",
     "date": "Sun Nov 29",
     "time": "7:00 am",
@@ -436,7 +425,11 @@
   "flags": [
    {
     "level": "red",
-    "text": "3 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Sat Nov 28, Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 5 - 87 Grams On My Row - 11.28.26 at 7:00 am."
+    "text": "2 sends over 3,000 contacts (about 4,427 each) are scheduled while email is red: Sun Nov 29, Mon Nov 30. First: [ISLA] BFCM Email 6 - Make The Switch - 11.29.26 at 7:00 am."
+   },
+   {
+    "level": "amber",
+    "text": "No sends scheduled for 5 days (Mon Nov 30 to Sat Dec 5)."
    }
   ],
   "window_days": 7,
